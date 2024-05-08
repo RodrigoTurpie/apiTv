@@ -4,6 +4,7 @@ const Titan116 = () => {
     let url = 'http://172.19.14.116/api/v1';
     let username = 'Operator';
     let password = 'titan';
+    let thumbnails = 'http://172.19.14.116/'
   
     const [channel, setChannel] = useState([]);
     const [titan, setTitan] = useState([]);
@@ -53,12 +54,11 @@ const Titan116 = () => {
             return (
               <div className='titans'>
               <h3>Titan: {titan.customname}</h3>
+              <a href={thumbnails} target="_blank">{thumbnails}</a>
                 <h3 key={item.UID}>{item.Name}</h3>
-
                 {
                   (item.State.State === 'Encoding') ? <p className="online">{item.State.State}</p> : <p className="offline">{item.State.State}</p>
-                }
-                
+                }                
                 
                 <p>Multicast de entrada: {input.Url}</p>
                 <p>Source: {input.Source}</p>

@@ -56,8 +56,9 @@ function Titan125() {
               <h3 key={item.UID}>{item.Name}</h3>
               {/* <img src={`${thumbnails}${item.ThumbnailUrl}`} alt={item.Name} />
               {console.log(`${thumbnails}${item.ThumbnailUrl}`)} */}
-              <p className="online">{item.State.State}</p>
-
+              {
+                  (item.State.State === 'Encoding') ? <p className="online">{item.State.State}</p> : <p className="offline">{item.State.State}</p>
+                }
               <p>Multicast de entrada: {input.Url}</p>
               <p>Source: {input.Source}</p>
 
