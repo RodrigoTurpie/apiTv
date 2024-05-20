@@ -20,16 +20,15 @@ function App() {
   return (
     <div className="App">      
       <Titan116 />
+      <Titan118 />
+      <Titan120 />
+      <Titan121 />
+      <Titan123 />
+      <Titan124 />
       <Titan125 />
       <Titan156 />
       <Titan157 />
-      <Titan124 />
-      {/* <Titan119 /> */}
-      <Titan121 />
-      <Titan120 />
-      <Titan118 />
       <Titan158 />
-      <Titan123 />
 
     </div>
   );

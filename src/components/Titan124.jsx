@@ -4,6 +4,7 @@ const Titan124 = () => {
     let url = 'http://172.19.14.124/api/v1';
     let username = 'Operator';
     let password = 'titan';
+    let thumbnails = 'http://172.19.14.124/'
   
     const [channel, setChannel] = useState([]);
     const [titan, setTitan] = useState([]);
@@ -26,7 +27,7 @@ const Titan124 = () => {
         .then(data => setChannel(data))
         .catch(err => console.log(err))
   
-    }, [])
+    }, [channel])
   
     useEffect(() => {
   
@@ -53,7 +54,9 @@ const Titan124 = () => {
             return (
               <div className='titans'>
               <h3>Titan: {titan.customname}</h3>
+              <a href={thumbnails} target="_blank">{thumbnails}</a>
                 <h3 key={item.UID}>{item.Name}</h3>
+                <img src={`${thumbnails}${item.ThumbnailUrl}` }alt="screenShot" />
                 {
                   (item.State.State === 'Encoding') ? <p className="online">{item.State.State}</p> : <p className="offline">{item.State.State}</p>
                 }

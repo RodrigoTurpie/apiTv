@@ -5,7 +5,7 @@ function Titan125() {
   let url = 'http://172.19.14.125/api/v1';
   let username = 'Operator';
   let password = 'titan';
-  let thumbnails = 'http://172.19.14.120/'
+  let thumbnails = 'http://172.19.14.125/'
 
   const [channel, setChannel] = useState([]);
   const [titan, setTitan] = useState([]);
@@ -26,7 +26,7 @@ function Titan125() {
       .then(data => setChannel(data))
       .catch(err => console.log(err))
 
-  }, [])
+  }, [channel])
 
   useEffect(() => {
 
@@ -53,7 +53,9 @@ function Titan125() {
           return (
             <div className='titans' style={{'backGround':'red'}}>
               <h3>Titan: {titan.customname}</h3>
+              <a href={thumbnails} target="_blank">{thumbnails}</a>
               <h3 key={item.UID}>{item.Name}</h3>
+              <img src={`${thumbnails}${item.ThumbnailUrl}` }alt="screenShot" />
               {/* <img src={`${thumbnails}${item.ThumbnailUrl}`} alt={item.Name} />
               {console.log(`${thumbnails}${item.ThumbnailUrl}`)} */}
               {
