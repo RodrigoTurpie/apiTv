@@ -10,7 +10,7 @@ import Titan121 from './components/Titan121';
 import Titan157 from './components/Titan157';
 import Titan156 from './components/Titan156';
 import Titan125 from './components/Titan125';
-
+import Titan109 from './components/Titan109';
 
 
 
@@ -18,7 +18,8 @@ function App() {
 
 
   return (
-    <div className="App">      
+    <div className="App">
+      <Titan109 />      
       <Titan116 />
       <Titan118 />
       <Titan120 />

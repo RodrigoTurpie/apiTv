@@ -4,7 +4,7 @@ const Titan158 = () => {
   let url = 'http://172.19.14.158/api/v1';
   let username = 'Operator';
   let password = 'titan';
-  const thumbnails = 'http://172.19.14.158'
+  const thumbnails = 'http://172.19.14.158/'
 
   const [channel, setChannel] = useState([]);
   const [titan, setTitan] = useState([]);

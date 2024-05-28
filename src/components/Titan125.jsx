@@ -45,22 +45,27 @@ function Titan125() {
   return (
     <div className="App">
       {
-        
+
         channel.map((item, index) => {
           const input = item.Input[0].IPInputList[0];
           const output = item.Outputs[0][0].Outputs[0]
+          const inputMulticast = input.Url;
 
           return (
-            <div className='titans' style={{'backGround':'red'}}>
+            <div className='titans' style={{ 'backGround': 'red' }}>
               <h3>Titan: {titan.customname}</h3>
               <a href={thumbnails} target="_blank">{thumbnails}</a>
               <h3 key={item.UID}>{item.Name}</h3>
-              <img src={`${thumbnails}${item.ThumbnailUrl}` }alt="screenShot" />
-              {/* <img src={`${thumbnails}${item.ThumbnailUrl}`} alt={item.Name} />
-              {console.log(`${thumbnails}${item.ThumbnailUrl}`)} */}
+              <img src={`${thumbnails}${item.ThumbnailUrl}`} alt="screenShot" />
+
               {
-                  (item.State.State === 'Encoding') ? <p className="online">{item.State.State}</p> : <p className="offline">{item.State.State}</p>
-                }
+                (item.State.State === 'Encoding') ? <p className="online">{item.State.State}</p> : <p className="offline">{item.State.State}</p>
+              }
+              {
+                
+               
+                
+              }
               <p>Multicast de entrada: {input.Url}</p>
               <p>Source: {input.Source}</p>
 
